@@ -13,7 +13,7 @@ public class ConsumerD {
         final Channel channel = connection.createChannel();
 
         //声明队列并绑定到交换器上
-        channel.queueDeclare("consumerC",false,false,false,null);
+        channel.queueDeclare("consumerC",false,false,true,null);
         channel.exchangeDeclare("demoEx", "direct");
         channel.queueBind("consumerC","demoEx","");
         channel.basicQos(1);

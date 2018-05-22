@@ -19,8 +19,10 @@ public class ProviderA {
                 .appId(AppId).build();
         //声明队列
         channel.exchangeDeclare("demoEx","direct");
-        String msg = "messageA";
-        channel.basicPublish("demoEx","a",props,msg.getBytes());
+        for(int i=0;i<10; i++) {
+            String msg = "messageA";
+            channel.basicPublish("demoEx", "a", props, msg.getBytes());
+        }
         channel.close();
         connection.close();
     }

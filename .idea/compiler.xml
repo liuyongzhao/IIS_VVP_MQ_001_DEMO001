@@ -9,8 +9,5 @@
         <module name="IIS_VVP_MQ_DEMO" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="IIS_VVP_MQ_DEMO" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
